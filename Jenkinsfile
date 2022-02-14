@@ -17,6 +17,11 @@ pipeline{
                 sh 'docker build -t thetips4you/springboot:latest .'
             }
         }
+ 	stage('Create Container'){
+            steps{
+                sh 'docker run  thetips4you/springboot:latest'
+            }
+        }
         
     }
 }
