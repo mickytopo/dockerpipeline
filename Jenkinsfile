@@ -19,7 +19,7 @@ pipeline{
         }
  	stage('Create Container'){
             steps{
-                sh 'docker run -d pruebadocker/pipeline:latest'
+                sh 'docker run -d -p 9090:8080 pruebadocker/pipeline:latest'
             }
         }
         
