@@ -12,16 +12,6 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage('Create Dockerimage'){
-            steps{
-                sh 'docker build -t pruebadocker/pipeline:latest .'
-            }
-        }
- 	stage('Create Container'){
-            steps{
-                sh 'docker run -d -p 9090:8080 pruebadocker/pipeline:latest'
-            }
-        }
         
     }
 }
