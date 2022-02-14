@@ -19,7 +19,7 @@ pipeline{
         }
  	stage('Create Container'){
             steps{
-                sh 'docker run pruebadocker/pipeline:latest'
+                sh 'docker run -d pruebadocker/pipeline:latest'
             }
         }
         
